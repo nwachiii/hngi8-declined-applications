@@ -30,7 +30,7 @@ body {
 	padding: 55px 45px 0;
 	display: flex;
 	flex-direction: column;
-	z-index: 1;
+	z-index: 11;
 }
 
 .navigation {
