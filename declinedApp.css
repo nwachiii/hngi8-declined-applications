@@ -329,7 +329,7 @@ small {
 }
 
 .pagination .btn, .pagination .dir  {
-  color: black;
+  color: #573F7B;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
@@ -338,7 +338,7 @@ small {
 
 /* Style the active/current link */
 .pagination a.active {
-  background-color: dodgerblue;
+  background-color: #573F7B;
   color: white;
 }
 
