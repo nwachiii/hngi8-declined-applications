@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<title>HNGi8 | Applications</title>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="declinedApp.css">
@@ -88,7 +88,7 @@
 				<div class="row2">
 					<div class="search-input">
 						<input class="input" type="text" placeholder="Search for Application">
-						<span><img class="search-icon" src="./img/search-icon.svg" alt=""></span>
+						<a href="#"><img class="search-icon" src="./img/search-icon.svg" alt=""></a>
 					</div>
 					<div class="filter-wrap">
 						<a href="#"><img src="./img/filter-icon.svg" alt=""></a>
@@ -163,12 +163,12 @@
 					</div>
 
 					<!-- pagination goes in here -->
-					<div class="pagination">
-					  <a href="#">&lt;</a>
-					  <a href="#">1</a>
-					  <a class="active" href="#">2</a>
-					  <a href="#">3</a>
-					  <a href="#">&gt;</a>
+					<div id="pagination" class="pagination">
+					  <a class="dir" href="#">&lt;</a>
+					  <a class="btn " href="#">1</a>
+					  <a class="btn active" href="#">2</a>
+					  <a class="btn " href="#">3</a>
+					  <a class="dir" href="#">&gt;</a>
 				</div>
 				</div>
 			</div>

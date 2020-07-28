@@ -22,7 +22,7 @@ body {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 26% 74%;
-	grid-template-rows: minmax(1180px, 100vh);
+	grid-template-rows: minmax(1190px, 100vh);
 }
 
 .side-bar {
@@ -31,6 +31,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	z-index: 1;
+	height: 100%;
+	grid-row: 1/-1;
 	/*height: 100%; /* 100% Full-height */
     /*width: 0;  0 width - change this with JavaScript 
     position: fixed; /* Stay in place */
@@ -238,8 +240,16 @@ small {
 
 .filter-wrap, .group-wrap {
 	display: flex;
-	margin-left: 90px;
+	margin-left: 77px;
 	align-items: center;
+	justify-content: space-between;
+}
+
+.filter-wrap > a,
+.filter-wrap > p, 
+.group-wrap > a,
+.group-wrap > p {
+	padding: 0 5px;
 }
 
 .row3 h2 {
@@ -318,7 +328,7 @@ small {
 	bottom: -3.5%;
 }
 
-.pagination a {
+.pagination .btn, .pagination .dir  {
   color: black;
   float: left;
   padding: 8px 16px;
