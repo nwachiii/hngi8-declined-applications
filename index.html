@@ -11,11 +11,18 @@
 	<!-- this container wraps up all the content of the page -->
 	<div class="parent-wrap">
 		<!-- sidebar goes in here -->
-		<div class="side-bar">
+		<div id="mySidebar" class="side-bar">
+
+		   <!--  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
 			<div class="brand-logo">
 				<img src="./img/zuri-logo.svg" alt="">
 			</div>
-			<div data-aos="fade-up" data-aos-duration="1350" class="navigation">
+
+			<div id="mainSidebar" data-aos="fade-up" data-aos-duration="1350" class="navigation">
+
+  				<!-- <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button> -->
+
 				<a class="nav" href="#">
 					<img class="icons" src="./img/dashB-icon.svg" alt="">
 					<p>Dashboard</p>
@@ -154,6 +161,15 @@
 							<img src="./img/user-check.svg" alt="">
 						</div>
 					</div>
+
+					<!-- pagination goes in here -->
+					<div class="pagination">
+					  <a href="#">&lt;</a>
+					  <a href="#">1</a>
+					  <a class="active" href="#">2</a>
+					  <a href="#">3</a>
+					  <a href="#">&gt;</a>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -165,8 +181,6 @@
 	<script>
 	    AOS.init();
 	</script>
-	<script>
-		//an if statement to check for an active nav class and add the nav-active bar
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>

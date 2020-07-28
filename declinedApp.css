@@ -22,7 +22,7 @@ body {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 26% 74%;
-	grid-template-rows: minmax(1511px, 100vh);
+	grid-template-rows: minmax(1180px, 100vh);
 }
 
 .side-bar {
@@ -30,8 +30,47 @@ body {
 	padding: 55px 45px 0;
 	display: flex;
 	flex-direction: column;
-	z-index: 11;
+	z-index: 1;
+	/*height: 100%; /* 100% Full-height */
+    /*width: 0;  0 width - change this with JavaScript 
+    position: fixed; /* Stay in place */
+  	/*top: 0;
+  	left: 0;*/
+    /*overflow-x: hidden;  Disable horizontal scroll */
+    /*transition: 0.5s;  0.5 second transition effect to slide in the sidebar */
+
 }
+/*
+.side-bar a {
+    transition: 0.3s;
+}*/
+
+.side-bar > div > a:hover {
+  color: #573F7B;
+}
+
+/* Position and style the close button (top right corner) 
+/*.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}*/
+
+/* The button used to open the sidebar */
+/*.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}*/
+
+/*.openbtn:hover {
+  background-color: #444;
+}*/
 
 .navigation {
 	position: relative; /*to position the nav-active-bar absolutely*/
@@ -62,8 +101,8 @@ a {
 	margin-left: 50px;
 }
 
-.nav-active {
-	color: #573F7B;
+.nav-active > img, .nav-active > p  {
+	color: #573F7B !important;
 }
 
 .nav-active-bar {
@@ -84,12 +123,13 @@ a {
 	background-color: #FFFFFF;
 	padding: 32px;
 	z-index: auto;
+	height: 100%;
 }
 
 .svg1 {
-	position: absolute;
+	position: fixed;
 	top: -2%;
-	right: 29%;
+	right: 22%;
 }
 
 .svg2 {
@@ -101,15 +141,15 @@ a {
 .svg3 {
 	position: absolute;
 	right: 0;
-	top: 80%;	
+	bottom: 0;	
 }
 
 .svg4 {
-	position: absolute;
+	position: fixed;
 	right: 12%;
-	top: 22%;
-	max-width: 280px;
-	max-height: 280px;	
+	top: 47.1%;
+	width: 280px;
+	height: 280px;	
 }
 
 .dashB-wrap {
@@ -217,6 +257,7 @@ small {
 	flex-direction: column;
 	justify-content: space-evenly;
 	max-width: 100%;
+	position: relative; /*for the absolute positioning of the paginations*/
 }
 
 .dash-box {
@@ -248,8 +289,6 @@ small {
 
 .stack, .skill {
 	font-weight: normal;
-	font-size: 18px;
-	line-height: 27px;
 	color: #573F7B;
 }
 
@@ -270,4 +309,38 @@ small {
 	justify-content: center;
 	display: flex;
 	justify-content: space-around;
+}
+
+/* Pagination links */
+.pagination {
+	position: absolute;
+	right: 10%;
+	bottom: -3.5%;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+
+/*--------------MEDIA QUERIES--------------------*/
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
